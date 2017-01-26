@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TestApp.CodeEditor"
+            Title="WebStudio"
+            BarBackgroundColor="Green">
+  <TabbedPage.Children>
+    <ContentPage Title="Editor">
+        <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+          <Grid.RowDefinitions>
+              <RowDefinition Height="10*"/>
+              <RowDefinition Height="*"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Editor x:Name="editor" TextChanged="refresh" Grid.Row="0" Grid.ColumnSpan="2"/>
+          <Button Text="Save" Grid.Row="1" Grid.Column="0" TextColor="White" BackgroundColor="Green" Clicked="OnSave"/>
+          <Button Text="Copy" Grid.Row="1" Grid.Column="1" TextColor="White" BackgroundColor="Green" Clicked="CopyToClipboard"/>
+         </Grid>
+    </ContentPage>
+    <ContentPage Title="Web Preview">
+      <WebView x:Name="web_view"/>
+    </ContentPage>
+  </TabbedPage.Children>
+</TabbedPage>

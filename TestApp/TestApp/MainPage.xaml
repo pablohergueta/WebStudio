@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TestApp"
+             x:Class="TestApp.MainPage"
+             BackgroundColor="Green">
+  <StackLayout Spacing="20" Padding="20"
+               VerticalOptions="Center">
+    <Image Source="webstudiotitle.png"
+           HorizontalOptions="CenterAndExpand"/>
+    <Image Source="logo.png"
+           HorizontalOptions="CenterAndExpand"/>
+    <Button x:Name="ButtonNewProject" Text="Nuevo Proyecto" TextColor="Green"
+            BackgroundColor="White" Clicked="ClickedNewProject"/>
+    <Button x:Name="ButtonOpenProject" Text="Abrir Proyecto" TextColor="Green"
+            BackgroundColor="White" Clicked="ClickedOpenProject"/>
+  </StackLayout>
+</ContentPage>
